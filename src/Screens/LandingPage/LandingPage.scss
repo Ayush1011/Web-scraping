@@ -1,0 +1,92 @@
+$primary-color: #262a2b;
+$primary-width: 85%;
+
+// Global Declaration
+
+%Align-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%Space-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+//Main-Container
+
+.Landing--MainContainer {
+  height: 100vh;
+  width: 100%;
+  background-color: $primary-color;
+  @extend %Align-mid;
+  justify-content: flex-end;
+}
+
+//  Main-container Section
+
+.parent--section {
+  width: $primary-width;
+  height: 100%;
+  @extend %Space-flex;
+}
+
+.Section--one {
+  height: 100%;
+  width: 45%;
+  @extend %Align-mid;
+;
+  // section--one block
+
+  section {
+      width: 100%;
+      height: 100%;
+    @extend %Align-mid;
+    flex-direction: column;
+  }
+
+  // section--one span
+
+  span{
+      width: 100%;
+      font-size: 3rem;
+      text-align: left;
+      color: #fff;
+  }
+  p{
+    width: 100%;
+    font-size: 1.2rem;
+    text-align: left;
+    color: #fff;
+  }
+
+  &--SearchBar{
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+  }
+
+}
+
+
+.Section--two {
+  height: 100%;
+  width: 55%;
+  @extend %Align-mid;
+
+  section {
+      width: 100%;
+      height: 80%;
+    @extend %Align-mid;
+  }
+
+  img{
+    width: 100%;
+    height: 100%;
+  }
+
+}
