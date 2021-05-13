@@ -4,7 +4,7 @@ import LandingPage from './LandingPage/LandingPage'
 
 export default function Home() {
     return (
-        <div>
+        <div style={{backgroundColor:"#262a2b"}}>
             <Navbar/>
             <LandingPage/>
 

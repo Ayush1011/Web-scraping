@@ -34,4 +34,34 @@ $primary-color: #262a2b;
   background-color: palegreen;
   border-radius: 0rem 0.9rem 0.9rem 0;
   @extend %Align-mid;
+
+ 
+}
+
+
+
+// Responsive style
+
+@media (max-width: 1024px){
+
+  .SearchBar-MainContainer{
+    height: 3.5rem;
+    
+  }
+
+  .search--button{
+    img{
+      height: 50%;
+    }
+  }
+}
+
+
+@media (max-width: 756px){
+
+  .SearchBar-MainContainer{
+    width: 90%;
+    
+  }
+
 }

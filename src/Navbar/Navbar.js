@@ -1,35 +1,40 @@
-import React from "react";
+import React,{useState,useEffect} from "react";
+import Collapsed_Navbar from "./Collapsed_Navbar";
+import Expanded_Navbar from "./Expanded_Navbar";
 import "./Navbar.scss";
-export default function Navbar() {
-  return (
-    <div className="Navbar--MainContainer">
-      <nav className="nav-container">
-        
-        <section className="section--one">
-            <img src="assets/Logo.png"/>
-        </section>
 
-        <section className="section--two">
 
-            <div className="nav-item">
-                <span className="nav-text">Home</span>
-            </div>
+function View_Width(){
+
+    const [width, setwidth] = useState(window.innerWidth);
+   useEffect(() => {
+       const handleResize=()=>{ 
        
-            <div className="nav-item">
-            <span className="nav-text">Home</span>
-            </div>
+           setwidth(window.innerWidth);
+       };
+       window.addEventListener("resize",handleResize);
+   }, []);
+   return width;
+ }   
 
-            <div className="nav-item">
-            <span className="nav-text">Home</span>
-            </div>
-            
-            <div className="nav-item">
-            <span className="nav-text">Home</span>
-            </div>
+export default function Navbar() {
 
-        </section>
+        
+    const width = View_Width();
+     
 
-      </nav>
+  return (
+    
+    <div className="All--navbar">
+
+        {
+        width<756
+        ?<Collapsed_Navbar/> 
+        : <Expanded_Navbar/>
+        }
+
     </div>
+
+
   );
 }

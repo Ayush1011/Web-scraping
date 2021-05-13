@@ -23,6 +23,7 @@ $primary-width: 85%;
   background-color: $primary-color;
   @extend %Align-mid;
   justify-content: flex-end;
+  
 }
 
 //  Main-container Section
@@ -70,6 +71,9 @@ $primary-width: 85%;
   }
 }
 
+
+//section two 
+
 .Section--two {
   height: 100%;
   width: 55%;
@@ -86,3 +90,65 @@ $primary-width: 85%;
     height: 100%;
   }
 }
+
+
+//responsive style
+
+
+
+@media (max-width: 1024px) {
+
+  .Section--one{
+    span{
+      width: 100%;
+      font-size: 2.5rem;
+      text-align: left;
+      color: #fff;
+    }
+
+    p {
+      width: 100%;
+      font-size: 1rem;
+      text-align: left;
+      color: #fff;
+      line-height: 1.5rem;
+    }
+
+
+  }
+
+  @media (max-width: 768px){
+
+    .Landing--MainContainer{
+      
+    }
+    .parent--section{
+      flex-direction: column-reverse;
+      height: 100%;
+      margin-bottom: 3rem;
+
+    }
+
+    .Section--one{
+      width:95%;
+      justify-content: flex-start;
+     
+    }
+    .Section--two{
+      width: 95%;
+      
+    }
+    .Landing--MainContainer{
+      height: 100vh;
+      justify-content: center;
+    }
+
+
+  }
+
+
+
+
+  
+} 
+  

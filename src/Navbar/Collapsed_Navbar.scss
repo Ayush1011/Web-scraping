@@ -1,0 +1,132 @@
+$primary-color: #262a2b;
+$primary-width: 85%;
+
+// Global Declaration
+
+%Align-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%Space-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+.Collapsed_Navbar{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    position: relative;
+    z-index: 1;
+}
+
+.Navbar--Parent--container{
+    height: 7rem;
+    width: 90%;
+    @extend %Space-flex;
+    justify-content: space-around;
+    position: relative;
+   
+}
+
+.Navbar--Section--one{
+
+    width: 60%;
+    height: 100%;
+
+    @extend %Align-mid;
+    justify-content: center;
+
+    img{
+        height: 50%;
+        width: 50%;
+    }
+}
+
+.Navbar--Section--two{
+
+    width:40%;
+    height: 100%;
+    @extend %Align-mid;
+    justify-content:flex-end;
+
+    img{
+        height: 30%;
+    }
+}
+
+
+.Collapsed_Navbar--Maincontainer{
+    height:100vh;
+    width: 100%;
+    background-color: white;
+    opacity: 0.9;
+    position: relative;
+    z-index: 1;
+    transition: ease-in-out 0.4s;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Navbar-Collapsed-Item{
+    
+    height: 15%;
+    @extend %Align-mid;
+
+    span{
+        font-size: 3rem;
+        font-weight: bold;
+    }
+
+}
+
+.Main-search-container{
+    height: 40%;
+    width:100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+.Collapsed_Navbar--input--box {
+    height: 4rem;
+    width: 75%;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+    flex-direction: row;
+  }
+  
+  .Collaspsed--search--box {
+    width: 80%;
+    border-radius: 0.5rem 0rem  0rem 0.5rem;
+    background-color: grey;
+    opacity: 0.5;
+    height: 100%;
+    border: none;
+    color: #000;
+    font-size: 2rem;
+    
+  }
+  .Collaspsed--search--box:focus {
+    outline: none;
+  }
+  
+  .Collaspsed--search--button {
+    width: 20%;
+    height: 102%;
+    background-color: palegreen;
+    border-radius: 0rem 0.9rem 0.9rem 0;
+    @extend %Align-mid;
+  
+   
+  }
