@@ -9,13 +9,16 @@ export default function LandingPage() {
         <div className="Section--one">
           <section>
             <span>
-              <b> Choose Product <br></br> Consedring Your</b> Personal Budget
+              <b>
+                {" "}
+                Choose Product <br></br> Consedring Your
+              </b>{" "}
+              Personal Budget
             </span>
             <p>{content.HomeSubTitle}</p>
             <div className="Section--one--SearchBar">
-            <SearchBar />
+              <SearchBar />
             </div>
-            
           </section>
         </div>
         <div className="Section--two">

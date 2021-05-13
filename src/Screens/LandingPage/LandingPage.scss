@@ -18,7 +18,7 @@ $primary-width: 85%;
 //Main-Container
 
 .Landing--MainContainer {
-  height: 100vh;
+  height: 85vh;
   width: 100%;
   background-color: $primary-color;
   @extend %Align-mid;
@@ -37,41 +37,38 @@ $primary-width: 85%;
   height: 100%;
   width: 45%;
   @extend %Align-mid;
-;
   // section--one block
 
   section {
-      width: 100%;
-      height: 100%;
+    width: 100%;
+    height: 100%;
     @extend %Align-mid;
     flex-direction: column;
   }
 
   // section--one span
 
-  span{
-      width: 100%;
-      font-size: 3rem;
-      text-align: left;
-      color: #fff;
+  span {
+    width: 100%;
+    font-size: 3rem;
+    text-align: left;
+    color: #fff;
   }
-  p{
+  p {
     width: 100%;
     font-size: 1.2rem;
     text-align: left;
     color: #fff;
+    line-height: 2rem;
   }
 
-  &--SearchBar{
+  &--SearchBar {
     width: 100%;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
-
   }
-
 }
-
 
 .Section--two {
   height: 100%;
@@ -79,14 +76,13 @@ $primary-width: 85%;
   @extend %Align-mid;
 
   section {
-      width: 100%;
-      height: 80%;
+    width: 100%;
+    height: 80%;
     @extend %Align-mid;
   }
 
-  img{
+  img {
     width: 100%;
     height: 100%;
   }
-
 }
