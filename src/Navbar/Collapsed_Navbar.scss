@@ -83,7 +83,17 @@ $primary-width: 85%;
     span{
         font-size: 3rem;
         font-weight: bold;
+        color: palegreen;
+        text-decoration: none;
+        
+
+        
+        
     }
+    Link{
+        text-decoration: none;
+    }
+    
 
 }
 
@@ -93,6 +103,7 @@ $primary-width: 85%;
     justify-content: center;
     display: flex;
     align-items: center;
+    
 }
 
 .Collapsed_Navbar--input--box {
@@ -104,6 +115,7 @@ $primary-width: 85%;
     justify-content: center;
     border: 2px solid white;
     flex-direction: row;
+    
   }
   
   .Collaspsed--search--box {
@@ -116,6 +128,7 @@ $primary-width: 85%;
     color: #000;
     font-size: 2rem;
     
+    
   }
   .Collaspsed--search--box:focus {
     outline: none;
@@ -127,6 +140,7 @@ $primary-width: 85%;
     background-color: palegreen;
     border-radius: 0rem 0.9rem 0.9rem 0;
     @extend %Align-mid;
-  
+    cursor: pointer;
+    
    
   }

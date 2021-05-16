@@ -2,6 +2,10 @@ import React from "react";
 import SearchBar from "../../Component/SearchBar";
 import { content } from "../../Content/Content";
 import "./LandingPage.scss";
+
+
+
+
 export default function LandingPage() {
   return (
     <div className="Landing--MainContainer">

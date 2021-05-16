@@ -1,0 +1,177 @@
+$primary-color: #262a2b;
+$primary-width: 85%;
+
+// Global Declaration
+
+%Align-mid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+%Space-flex {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.Product-Maincontainer {
+  height: 100%;
+  width: 100%;
+  background-color: $primary-color;
+  justify-content: center;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.Procuct-Parent-container {
+  min-height: 90vh;
+  max-height: 100%;
+  width: 90%;
+  @extend %Space-flex;
+}
+
+// sections of parent
+
+.Product-section--one {
+  width: 30%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+.Tlit--box {
+  width: 100%;
+  height: 80%;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 3px 3px 3px #ccc;
+  @extend %Align-mid;
+  padding: 5%;
+
+  img{
+      height:100%
+  }
+}
+
+.Product-section--two {
+  width: 55%;
+  height: 100%;
+  @extend %Align-mid;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  &--heading {
+    font-size: 1.5rem;
+    color: #fff;
+    font-weight: 500;
+    width: 100%;
+    height: 100%;
+    text-align: left;
+    overflow:hidden
+  }
+
+  &--price {
+    @extend %Align-mid;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  &--subheading {
+    color: white;
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-top: 1.5%;
+  }
+  &--highlight {
+    color: white;
+    text-align: left;
+    width: 80%;
+    height: 100%;
+    font-size: 1rem;
+    margin-top: 2%;
+  }
+  &--highlight::before {
+    content: "• ";
+  }
+
+  &--underline {
+    margin-top: 2%;
+    width: 80%;
+    height: 2px;
+    background-color: white;
+  }
+
+  &--description {
+    color: white;
+    font-size: 1rem;
+    text-align: left;
+    height: 100%;
+    width: 80%;
+    margin-top: 2%;
+  }
+
+  &--button {
+    height: 4rem;
+    width: 30%;
+    background-color: palegreen;
+    margin-top: 3%;
+    border-radius: 0.5rem;
+    @extend %Align-mid;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  // &--button:hover{
+  //     transform: scale(1.1);
+  //     transition: transform 0.5s ease;
+  // }
+}
+
+//Responsive part//
+
+
+
+@media (max-width:756px){
+
+    .Product-Maincontainer{
+        justify-content: center;
+        align-items: center;
+        display: flex;
+    }
+
+    .Procuct-Parent-container{
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .Product-section--one{
+        width:90%;
+    }
+    .Product-section--two{
+        width: 90%;
+        margin-top: 5%;
+    }
+
+    .Product-section--two{
+        &--highlight{
+            width: 100%;
+        }
+        &--description{
+            width: 100%;
+        }
+        &--button{
+            width:100%;
+            margin-bottom: 5%;
+        }
+    }
+
+
+}

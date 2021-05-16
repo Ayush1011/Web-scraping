@@ -1,0 +1,25 @@
+.Amazon--banner--MainContainer{
+
+    height:4rem;
+    width: 30%;
+    background-color: white;
+    margin-top: 5%;
+    border-radius: 1rem;
+
+    img{
+        height:100%;
+        width: 80%;
+
+    }
+
+}
+
+@media (max-width:756px){
+    .Amazon--banner--MainContainer{
+        width:70%;
+
+        img{
+            width: 80%;
+        }
+    }
+}

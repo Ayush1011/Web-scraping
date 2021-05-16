@@ -1,6 +1,8 @@
 import React, { useState, UseEffect } from "react";
 import SearchBar from "../Component/SearchBar";
 import "./Collapsed_Navbar.scss";
+import { BrowserRouter, Route, Link } from "react-router-dom";
+
 export default function Collapsed_Navbar() {
   const [NavbarOpen, setNavbarOpen] = useState(false);
 
@@ -23,16 +25,16 @@ export default function Collapsed_Navbar() {
       {NavbarOpen ? (
         <div className="Collapsed_Navbar--Maincontainer">
           <div className="Navbar-Collapsed-Item">
-            <span>Home</span>
+          <Link to="/" style={{textDecoration:"none"}}><span>Home</span></Link>
+                    </div>
+
+          <div className="Navbar-Collapsed-Item">
+            <Link to="/product" style={{textDecoration:"none"}}><span>Products</span></Link>
           </div>
 
           <div className="Navbar-Collapsed-Item">
-            <span>Home</span>
-          </div>
-
-          <div className="Navbar-Collapsed-Item">
-            <span>Home</span>
-          </div>
+          <Link to="/" style={{textDecoration:"none"}}><span>Liked</span></Link>        
+            </div>
 
         <div className="Main-search-container">
           <div className="Collapsed_Navbar--input--box">
