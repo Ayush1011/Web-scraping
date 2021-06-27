@@ -17,17 +17,17 @@ $primary-width: 85%;
 
 
 .Collapsed_Navbar{
-    height: 100%;
+    height: 100vh;
     width: 100%;
     display: flex;
     justify-content: flex-end;
     flex-direction: column;
-    position: relative;
-    z-index: 1;
+  
+
 }
 
 .Navbar--Parent--container{
-    height: 7rem;
+    height: 9rem;
     width: 90%;
     @extend %Space-flex;
     justify-content: space-around;
@@ -63,16 +63,17 @@ $primary-width: 85%;
 
 
 .Collapsed_Navbar--Maincontainer{
-    height:100vh;
+    height:100%;
     width: 100%;
     background-color: white;
-    opacity: 0.9;
+    opacity: 0.98;
     position: relative;
     z-index: 1;
     transition: ease-in-out 0.4s;
     justify-content: space-around;
     flex-direction: column;
     align-items: center;
+    top:0
 }
 
 .Navbar-Collapsed-Item{
@@ -143,4 +144,20 @@ $primary-width: 85%;
     cursor: pointer;
     
    
+  }
+
+
+  .Empty_Navbar{
+    height:100vh
+  }
+
+  //------------RESPONSIVE-------------
+
+
+  @media (max-height: 768px){
+    // .Navbar--Parent--container{
+    //     height:100%;
+    // }
+
+
   }

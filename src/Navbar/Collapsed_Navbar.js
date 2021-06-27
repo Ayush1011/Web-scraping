@@ -25,15 +25,15 @@ export default function Collapsed_Navbar() {
       {NavbarOpen ? (
         <div className="Collapsed_Navbar--Maincontainer">
           <div className="Navbar-Collapsed-Item">
-          <Link to="/" style={{textDecoration:"none"}}><span>Home</span></Link>
+          <a href="/" style={{textDecoration:"none"}}><span>Home</span></a>
                     </div>
 
           <div className="Navbar-Collapsed-Item">
-            <Link to="/product" style={{textDecoration:"none"}}><span>Products</span></Link>
+            <a hrefo="/product" style={{textDecoration:"none"}}><span>Products</span></a>
           </div>
 
           <div className="Navbar-Collapsed-Item">
-          <Link to="/" style={{textDecoration:"none"}}><span>Liked</span></Link>        
+          <a href="/" style={{textDecoration:"none"}}><span>Liked</span></a>        
             </div>
 
         <div className="Main-search-container">
@@ -47,7 +47,7 @@ export default function Collapsed_Navbar() {
         </div>
         </div>
       ) : (
-        <div></div>
+        <div className="Empty_Navbar"></div>
       )}
     </div>
   );

@@ -1,0 +1,5 @@
+export const ADD_CONTENT="ADD_CONTENT"
+export const FIND_ITEM = "FIND_ITEM";
+export const FLIPKART_FETCH = 'FLIPKART_FETCH';
+export const AMAZON_FETCH = 'AMAZON_FETCH';
+export const PRODUCT_FETCH="PRODUCT_FETCH"
