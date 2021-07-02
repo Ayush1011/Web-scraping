@@ -83,7 +83,12 @@ export default function Product() {
     setProductName("..Loading");
     sethighlight("..Loading");
     setConfigration("..Loading");
-    setImage(location.state.ImageLink);
+    if(location.state.ImageLink==""||location.state.ImageLink==undefined){
+      setImage("https://www.google.com/url?sa=i&url=https%3A%2F%2Flallahoriye.com%2F%3Fproduct%3Dproduct-5&psig=AOvVaw213vVSZ4fKvqnvoUTO_VHh&ust=1625329725944000&source=images&cd=vfe&ved=0CAoQjRxqFwoTCOD_3JrnxPECFQAAAAAdAAAAABAD")
+    }else{
+      setImage(location.state.ImageLink);
+    }
+    
     hitapicompany(location.state.detail, location.state.Company);
   }, [location.state.ImageLink]);
 

@@ -8,6 +8,7 @@ import Amazon_banner from "../../Component/Amazon_banner";
 import Flipkart_banner from "../../Component/Flipkart_banner";
 import SearchContainer from "../../Containers/SearchContainer";
 import { useDispatch, useSelector } from "react-redux";
+import Loading from "../../Component/Loading";
 import DATA from "../../service/data";
 
 import { useParams } from "react-router";
@@ -33,7 +34,8 @@ const options = {
 export default function ListProduct(props) {
   let data = useSelector((state) => state.cardItems.items);
   const { search } = useParams();
-  console.log(data);
+ 
+ 
   const history = useHistory();
 
   if (data.length == 0) {
@@ -67,18 +69,28 @@ const handlerouteAmazon=(link,ImageLink)=>{
     
     }
 });
-
-
 }
 
 
+useEffect(() => {
+  
 
-  useEffect((props) => {});
+
+}, data.flipkart)
+
+
+
+
+ 
 
   return (
     <div className="List--Maincontainer">
       <Navbar />
       <div className="List--Parent--Container">
+
+      
+
+
         <div className="Search--Container">
           <SearchContainer />
         </div>

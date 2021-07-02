@@ -1,9 +1,12 @@
 import { content } from '../../Content/Content'
-import { ADD_CONTENT,FIND_ITEM, FLIPKART_FETCH,AMAZON_FETCH,PRODUCT_FETCH } from '../constants'
+import { ADD_CONTENT,FIND_ITEM, FLIPKART_FETCH,AMAZON_FETCH,PRODUCT_FETCH, LOADING, SHOW_LOADING, HIDE_LOADING } from '../constants'
 const initialState = {
     items: [],
     flipkart: [],
-    amazon:[]
+    amazon:[],
+    showloading:true,
+    hideloading:false
+
 }
 export default function cardItems(state = initialState, action) {
     
@@ -29,6 +32,18 @@ export default function cardItems(state = initialState, action) {
                     ...state,
                     items:action.data
                 }    
+            case SHOW_LOADING:
+                return{
+                    ...state,
+                    showloading:action.data
+                } 
+                
+            case HIDE_LOADING:
+                return{
+                   ...state,
+                   hideloading:action.data
+                }    
+        
 
         default:
             return state;
